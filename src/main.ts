@@ -6,6 +6,7 @@ async function bootstrap() {
     logger: ['log', 'error', 'warn'],
   });
   await app.listen(3005);
+  app.enableCors({ origin: '*' });
   console.log(`Application is running on: ${await app.getUrl()}`);
 }
 bootstrap();
